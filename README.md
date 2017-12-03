@@ -1,3 +1,3 @@
-# gcr_mirror_Script
-gcr_images_mirror_docker-hub
-
+# gcr_mirror_script
+# TODO
+Check the changes of the  image by Digest
