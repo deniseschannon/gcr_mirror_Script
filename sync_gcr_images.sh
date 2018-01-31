@@ -3,9 +3,7 @@
 workdir=`pwd`
 log_file=${workdir}/sync_images_$(date +"%Y-%m-%d").log
 
-#Input params: messages
-#Output params: None
-#Function: Present the processing log and write to log file.
+
 logger()
 {   
     log=$1
@@ -41,9 +39,7 @@ docker_install_check ()
     fi
 }
 
-#Input params: None
-#Output params: None
-#Function: Install jq tools regarding to different linux releases.
+
 jq_install_check ()
 {
     logger "check jq install"
@@ -57,9 +53,7 @@ jq_install_check ()
     fi
 }
 
-#Input params: None
-#Output params: None
-#Function: Loop to load and verify user's registry information.
+
 docker_login_check ()
 {   
     docker_info=$(docker info |grep Username |wc -l)
@@ -74,9 +68,7 @@ docker_login_check ()
     fi
 }
 
-#Input params: kube namespace, image information, rancher namespace
-#Output params: None
-#Function: Pull and retag the image from google's offical registry, then push it to customized registry.
+
 docker_push ()
 {   
     s_repo=$1
